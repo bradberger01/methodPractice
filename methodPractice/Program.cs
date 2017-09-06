@@ -11,27 +11,34 @@ namespace methodPractice
         static void Main(string[] args)
         {
 
+            countToTen();
+
+       
+            //string eggs = "chicken";
+            //string flour = "fried";
+            //Console.WriteLine(ingredients(eggs, flour));
             //favoriteFoods("pizza","Italian");
 
             //Console.WriteLine("What is your age");
             //int userAge = int.Parse(Console.ReadLine());
             //retirementCalculator(userAge);
 
-            double hoursWorked = 8;
-            double wage = 15;
+            //double hoursWorked = 8;
+            //double wage = 15;
 
-            Console.WriteLine(wageCalculator(hoursWorked, wage));
+            //Console.WriteLine(wageCalculator(hoursWorked, wage));
 
-            int laps = 16;
-            Console.WriteLine(milesRun(laps));
+            //int laps = 16;
+            //Console.WriteLine(milesRun(laps));
 
-            double bill = 87.20;
-            double stateTax = .07;
+            //double bill = 87.20;
+            //double stateTax = .07;
 
-            Console.WriteLine(taxCalculator(bill,stateTax));
-           
+            //Console.WriteLine(taxCalculator(bill,stateTax));
 
-            //int number1 = 25;
+
+            //int numbe
+            //r1 = 25;
             //int number2 = 50;
             //int total = Add(number1, number2);
             //Console.WriteLine(total);
@@ -102,5 +109,15 @@ namespace methodPractice
             double grandTotal = (bill * stateTax) + bill;
             return grandTotal;
         }
-    }
+        public static string ingredients(string eggs, string flour)
+        {
+            string cake = eggs + " " + flour;
+            return cake;
+        }
+        public static void countToTen()
+        {
+            for(int index = 1; index <= 10; index++)
+                Console.WriteLine(index);
+        }
+    }   
 }
