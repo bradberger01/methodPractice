@@ -10,13 +10,26 @@ namespace methodPractice
     {
         static void Main(string[] args)
         {
+
+            //favoriteFoods("pizza","Italian");
+
+            //Console.WriteLine("What is your age");
+            //int userAge = int.Parse(Console.ReadLine());
+            //retirementCalculator(userAge);
+
+            double hoursWorked = 8;
+            double wage = 15;
+
+            Console.WriteLine(wageCalculator(hoursWorked, wage));
+
+            int laps = 16;
+            Console.WriteLine(milesRun(laps));
+
+            double bill = 87.20;
+            double stateTax = .07;
+
+            Console.WriteLine(taxCalculator(bill,stateTax));
            
-            favoriteFoods("pizza","Italian");
-
-            Console.WriteLine("What is your age");
-            int userAge = int.Parse(Console.ReadLine());
-            retirementCalculator(userAge);
-
 
             //int number1 = 25;
             //int number2 = 50;
@@ -53,7 +66,7 @@ namespace methodPractice
         //create a method called favoiteFood. It should take two string parameters, one should be nameOfFood and other should be
         //being the food. It should be void return type. The method should concantinate the two values.
 
-        public static void favoriteFoods (string nameOfFood, string typeOfFood)
+        public static void favoriteFoods(string nameOfFood, string typeOfFood)
         {
             Console.WriteLine(nameOfFood + " " + typeOfFood);
         }
@@ -68,6 +81,26 @@ namespace methodPractice
             int x = 65 - userAge;
             Console.WriteLine("You will retire in " + x + " years.");
 
+        }
+        //WageCalculator - two double parameters, one hours worked, one hourly wage. Return type should be double. Method should 
+        //calculate 
+
+        public static double wageCalculator(double hoursWorked, double wage)
+        {
+            double monthlyWage = hoursWorked * wage * 30;
+            return monthlyWage;
+        }
+
+        public static int milesRun(int laps)
+        {
+        int totalMiles = laps / 4;
+        return totalMiles;
+        }
+        
+        public static double taxCalculator(double bill, double stateTax)
+        {
+            double grandTotal = (bill * stateTax) + bill;
+            return grandTotal;
         }
     }
 }
